@@ -21,3 +21,39 @@ stilizziamo la sezione realizzando le card di ciascun
 membro del team, come nel mockup allegato.
 
 */
+
+// creare array di objects 
+const membersList = [
+    {
+        photo: "",
+        name: "Wayne Branett",
+        role: "Founder & CEO",
+    },
+    {
+        photo: "",
+        name: "Angela Caroll",
+        role: "Chief Editor",
+    },
+    {
+        photo: "",
+        name: "Walter Gordon",
+        role: "Office Manager",
+    },
+    {
+        photo: "",
+        name: "Angela Lopez",
+        role: "Social Media Manager",
+    },
+    {
+        photo: "",
+        name: "Scott Estrada",
+        role: "Developer",
+    },
+    {
+        photo: "",
+        name: "Barbara Ramos",
+        role: "Graphic Designer",
+    },
+];
+
+console.table(membersList);
