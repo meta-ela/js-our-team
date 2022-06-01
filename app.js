@@ -25,32 +25,32 @@ membro del team, come nel mockup allegato.
 // creare array di objects 
 const membersList = [
     {
-        photo: "",
+        photo: "wayne-barnett-founder-ceo.jpg",
         name: "Wayne Branett",
         role: "Founder & CEO",
     },
     {
-        photo: "",
+        photo: "angela-caroll-chief-editor.jpg",
         name: "Angela Caroll",
         role: "Chief Editor",
     },
     {
-        photo: "",
+        photo: "walter-gordon-office-manager.jpg",
         name: "Walter Gordon",
         role: "Office Manager",
     },
     {
-        photo: "",
+        photo: "angela-lopez-social-media-manager.jpg",
         name: "Angela Lopez",
         role: "Social Media Manager",
     },
     {
-        photo: "",
+        photo: "scott-estrada-developer.jpg",
         name: "Scott Estrada",
         role: "Developer",
     },
     {
-        photo: "",
+        photo: "barbara-ramos-graphic-designer.jpg",
         name: "Barbara Ramos",
         role: "Graphic Designer",
     },
@@ -58,19 +58,68 @@ const membersList = [
 
 console.table(membersList);
 
+let allTemplate = "";
 
-// stampo in console ogni elemento sepratamente con un ciclo
+let teamContainer = document.querySelector(".team-container");
+
+// stampo in console ogni elemento separatamente con un ciclo
 for (let i = 0; i < membersList.length; i++) {
-    const member = membersList[i]; 
+    let member = membersList[i]; 
 
     /* console.log(
         member.photo, 
         `Complete Name: ${member.name}`,
         `Company Role: ${member.role}`
-        );
+    );
  */
     console.log(
-        member.photo, 
         `Complete Name: ${member.name} & Company Role: ${member.role}`,
-        );
+    );
+    
+    // stampare in html un template
+    let templateLiteral = `
+    <div class="team-card">
+        <div class="card-image">
+            <img
+            src="img/${member.photo}"
+            alt="Wayne Barnett"
+            />
+        </div>
+        <div class="card-text">
+            <h3>${member.name}</h3>
+            <p>${member.role}</p>
+        </div>
+    </div>`
+    
+    /* allTemplate += templateLiteral; */
+    
+    teamContainer.append(createElementFromHTML(templateLiteral));
 }
+
+/* teamContainer.innerHTML = allTemplate; */
+
+/* function createCard(user) {
+    const teamContainer = document.querySelector(".team-container");
+    let templateLiteral = `
+    <div class="team-card">
+        <div class="card-image">
+            <img
+            src="img/wayne-barnett-founder-ceo.jpg"
+            alt="Wayne Barnett"
+            />
+        </div>
+        <div class="card-text">
+            <h3>${user.name}</h3>
+            <p>${user.role}</p>
+        </div>
+    </div>`
+    return templateLiteral
+
+    teamContainer.append(user);
+}
+
+createCard(membersList); */
+
+
+
+
