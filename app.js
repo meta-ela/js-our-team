@@ -57,3 +57,20 @@ const membersList = [
 ];
 
 console.table(membersList);
+
+
+// stampo in console ogni elemento sepratamente con un ciclo
+for (let i = 0; i < membersList.length; i++) {
+    const member = membersList[i]; 
+
+    /* console.log(
+        member.photo, 
+        `Complete Name: ${member.name}`,
+        `Company Role: ${member.role}`
+        );
+ */
+    console.log(
+        member.photo, 
+        `Complete Name: ${member.name} & Company Role: ${member.role}`,
+        );
+}
