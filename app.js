@@ -91,12 +91,12 @@ for (let i = 0; i < membersList.length; i++) {
         </div>
     </div>`
     
-    /* allTemplate += templateLiteral; */
+    allTemplate += templateLiteral;
     
-    teamContainer.append(createElementFromHTML(templateLiteral));
+    // teamContainer.append(createElementFromHTML(templateLiteral));
 }
 
-/* teamContainer.innerHTML = allTemplate; */
+teamContainer.innerHTML = allTemplate;
 
 /* function createCard(user) {
     const teamContainer = document.querySelector(".team-container");
